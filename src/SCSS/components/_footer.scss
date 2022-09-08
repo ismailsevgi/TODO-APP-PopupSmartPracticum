@@ -1,0 +1,13 @@
+.footer {
+  @include flex-display($direction: row, $space: center, $align: end);
+  width: 100%;
+  height: 5rem;
+  padding-bottom: 0.3rem;
+
+  i {
+    font-size: 1.6rem;
+  }
+  span {
+    font-size: 1.6rem;
+  }
+}

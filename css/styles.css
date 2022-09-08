@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
+.form {
+  font-family: "Oswald", sans-serif;
+  width: 52.6rem;
+  height: 12.8rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #474787;
+  border: 1px solid #706fd3;
+}
+.form .inputBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.form .inputBox-input {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  width: 36rem;
+  height: 4rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid black;
+  letter-spacing: 1px;
+  font-size: 1.6rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 500;
+  color: #f7f1e3;
+}
+.form .inputBox-input:focus {
+  outline: none;
+}
+.form .inputBox-input::-moz-placeholder {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 500;
+  padding-top: 1rem;
+  color: #f7f1e3;
+}
+.form .inputBox-input:-ms-input-placeholder {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 500;
+  padding-top: 1rem;
+  color: #f7f1e3;
+}
+.form .inputBox-input::placeholder {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 500;
+  padding-top: 1rem;
+  color: #f7f1e3;
+}
+.form .inputBox button {
+  font-family: "Oswald", sans-serif;
+  width: 7rem;
+  height: 4rem;
+  letter-spacing: 2px;
+  background-color: #2c2c54;
+  color: #f7f1e3;
+  border: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.form .inputBox button:hover {
+  background-color: #f7f1e3;
+  color: #2c2c54;
+  border: 1px solid #2c2c54;
+}
+.form-priority {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.form-priority input[type=checkbox] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+.form-priority label {
+  margin-right: 1rem;
+}
+.form-priority h2 {
+  margin-right: 1rem;
+  letter-spacing: 1px;
+}
+.form-priority .labelHigh {
+  display: inline-block;
+  height: 2rem;
+  width: 5rem;
+  background-color: #ff5252;
+  cursor: pointer;
+  position: relative;
+}
+.form-priority .labelHigh::before {
+  position: absolute;
+  content: "HIGH";
+  color: inherit;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.form-priority .labelHigh-activated {
+  display: inline-block;
+  height: 2rem;
+  width: 5rem;
+  background-color: #ff5252;
+  cursor: pointer;
+  border: 2px solid #f7f1e3;
+  position: relative;
+}
+.form-priority .labelHigh-activated::before {
+  position: absolute;
+  content: "HIGH";
+  color: inherit;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.form-priority .labelMedium {
+  display: inline-block;
+  height: 2rem;
+  width: 5rem;
+  background-color: #ff793f;
+  cursor: pointer;
+  position: relative;
+}
+.form-priority .labelMedium::before {
+  position: absolute;
+  content: "MEDIUM";
+  color: inherit;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.form-priority .labelMedium-activated {
+  display: inline-block;
+  height: 2rem;
+  width: 5rem;
+  background-color: #ff793f;
+  cursor: pointer;
+  border: 2px solid #f7f1e3;
+  position: relative;
+}
+.form-priority .labelMedium-activated::before {
+  position: absolute;
+  content: "MEDIUM";
+  color: inherit;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.form-priority .labelLow {
+  display: inline-block;
+  height: 2rem;
+  width: 5rem;
+  background-color: #33d9b2;
+  cursor: pointer;
+  position: relative;
+}
+.form-priority .labelLow::before {
+  position: absolute;
+  content: "LOW";
+  color: inherit;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.form-priority .labelLow-activated {
+  display: inline-block;
+  height: 2rem;
+  width: 5rem;
+  background-color: #33d9b2;
+  cursor: pointer;
+  border: 2px solid #f7f1e3;
+  position: relative;
+}
+.form-priority .labelLow-activated::before {
+  position: absolute;
+  content: "LOW";
+  color: inherit;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.form .filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.form .filter .select {
+  align-self: center;
+  height: 2.4rem;
+  width: 7.1rem;
+  background-color: transparent;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.all-cards {
+  margin: 0 auto;
+  color: #f7f1e3;
+  letter-spacing: 1px;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 1rem;
+  grid-column-gap: 2rem;
+}
+.all-cards .card {
+  width: 18rem;
+  height: 12rem;
+  background-color: transparent;
+  margin: 1rem auto;
+}
+.all-cards .card .card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+.all-cards .card .card-inner-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.all-cards .card .card-inner-card-high, .all-cards .card .card-inner-card-medium, .all-cards .card .card-inner-card-low, .all-cards .card .card-inner-card-done {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom: 1px dotted black;
+  width: 100%;
+  height: 100%;
+}
+.all-cards .card .card-inner-card-high .content-div, .all-cards .card .card-inner-card-medium .content-div, .all-cards .card .card-inner-card-low .content-div, .all-cards .card .card-inner-card-done .content-div {
+  width: 80%;
+  height: 80%;
+  flex: 3;
+  display: inline-block;
+  word-wrap: break-word;
+  padding-top: 0.4rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 1000;
+  letter-spacing: 1px;
+}
+.all-cards .card .card-inner-card-high .content-div p, .all-cards .card .card-inner-card-medium .content-div p, .all-cards .card .card-inner-card-low .content-div p, .all-cards .card .card-inner-card-done .content-div p {
+  font-size: 1.5rem;
+}
+.all-cards .card .card-inner-card-high h3, .all-cards .card .card-inner-card-medium h3, .all-cards .card .card-inner-card-low h3, .all-cards .card .card-inner-card-done h3 {
+  font-family: "Source Sans Pro", sans-serif;
+  flex: 1;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  width: 90%;
+  text-align: center;
+}
+.all-cards .card .card-inner-card-high h3 span, .all-cards .card .card-inner-card-medium h3 span, .all-cards .card .card-inner-card-low h3 span, .all-cards .card .card-inner-card-done h3 span {
+  color: #ffda79;
+}
+.all-cards .card .card-inner-card-high {
+  background-color: #8c2d2d;
+  box-shadow: rgba(255, 82, 82, 0.5) 0px 0px 20px;
+}
+.all-cards .card .card-inner-card-medium {
+  background-color: #a54d28;
+  box-shadow: rgba(255, 121, 63, 0.5) 0px 0px 20px;
+}
+.all-cards .card .card-inner-card-low {
+  background-color: #176352;
+  box-shadow: rgba(51, 217, 178, 0.5) 0px 0px 20px;
+}
+.all-cards .card .card-inner-card-done {
+  background-color: #696762;
+  box-shadow: rgba(209, 204, 192, 0.5) 0px 0px 20px;
+}
+.all-cards .card .card-inner-backface-high, .all-cards .card .card-inner-backface-medium, .all-cards .card .card-inner-backface-low, .all-cards .card .card-inner-backface-done {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+  width: 18rem;
+  transform: translateY(-60%);
+  transform: rotateX(90deg);
+  transform-origin: top;
+  opacity: 1;
+  border-top: 1px dotted black;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: inherit;
+  gap: 2rem;
+}
+.all-cards .card .card-inner-backface-high .check,
+.all-cards .card .card-inner-backface-high .del, .all-cards .card .card-inner-backface-medium .check,
+.all-cards .card .card-inner-backface-medium .del, .all-cards .card .card-inner-backface-low .check,
+.all-cards .card .card-inner-backface-low .del, .all-cards .card .card-inner-backface-done .check,
+.all-cards .card .card-inner-backface-done .del {
+  cursor: pointer;
+}
+.all-cards .card .card-inner-backface-high .check i,
+.all-cards .card .card-inner-backface-high .del i, .all-cards .card .card-inner-backface-medium .check i,
+.all-cards .card .card-inner-backface-medium .del i, .all-cards .card .card-inner-backface-low .check i,
+.all-cards .card .card-inner-backface-low .del i, .all-cards .card .card-inner-backface-done .check i,
+.all-cards .card .card-inner-backface-done .del i {
+  font-size: 1.6rem;
+  color: black;
+  transition: all 0.5s;
+}
+.all-cards .card .card-inner-backface-high .check:hover i,
+.all-cards .card .card-inner-backface-high .del:hover i, .all-cards .card .card-inner-backface-medium .check:hover i,
+.all-cards .card .card-inner-backface-medium .del:hover i, .all-cards .card .card-inner-backface-low .check:hover i,
+.all-cards .card .card-inner-backface-low .del:hover i, .all-cards .card .card-inner-backface-done .check:hover i,
+.all-cards .card .card-inner-backface-done .del:hover i {
+  color: rgb(255, 255, 255);
+}
+.all-cards .card .card-inner-backface-high {
+  background-color: #8c2d2d;
+  box-shadow: rgba(255, 82, 82, 0.5) 0px 0px 20px;
+}
+.all-cards .card .card-inner-backface-medium {
+  background-color: #a54d28;
+  box-shadow: rgba(255, 121, 63, 0.5) 0px 0px 20px;
+}
+.all-cards .card .card-inner-backface-low {
+  background-color: #176352;
+  box-shadow: rgba(51, 217, 178, 0.5) 0px 0px 20px;
+}
+.all-cards .card .card-inner-backface-done {
+  background-color: #696762;
+  box-shadow: rgba(209, 204, 192, 0.5) 0px 0px 20px;
+}
+.all-cards .card:hover .card-inner-backface-high, .all-cards .card:hover .card-inner-backface-medium, .all-cards .card:hover .card-inner-backface-low, .all-cards .card:hover .card-inner-backface-done {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+  width: 100%;
+  height: 5rem;
+  padding-bottom: 0.3rem;
+}
+.footer i {
+  font-size: 1.6rem;
+}
+.footer span {
+  font-size: 1.6rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  padding-top: 3rem;
+  background-color: #2c2c54;
+}
+
+.container {
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 80%;
+}/*# sourceMappingURL=styles.css.map */

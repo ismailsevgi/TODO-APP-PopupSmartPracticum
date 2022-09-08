@@ -1,0 +1,157 @@
+.all-cards {
+  margin: 0 auto;
+  color: $light-color;
+  letter-spacing: 1px;
+  width: $all-cards-width;
+  display: grid;
+
+  grid-template-columns: $grid-template-columns;
+  grid-row-gap: $grid-row-gap;
+  grid-column-gap: 2rem;
+
+  .card {
+    width: $card-width;
+    height: $card-height;
+    background-color: transparent;
+
+    margin: 1rem auto;
+
+    .card-inner {
+      position: relative;
+      @include W-H100();
+      transition: all 0.5s;
+
+      &-card {
+        position: absolute;
+        @include W-H100();
+
+        &-high,
+        &-medium,
+        &-low,
+        &-done {
+          @include flex-display($direction: column, $space: space-around);
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          border-bottom: 1px dotted black;
+
+          @include W-H100();
+
+          .content-div {
+            width: 80%;
+            height: 80%;
+            flex: 3;
+            display: inline-block;
+            word-wrap: break-word;
+            padding-top: 0.4rem;
+            font-family: $secondary-font;
+            font-weight: 1000;
+            letter-spacing: 1px;
+
+            p {
+              font-size: $card-description-size;
+            }
+          }
+
+          h3 {
+            font-family: $secondary-font;
+            flex: 1;
+            font-size: $card-date-size;
+            text-transform: uppercase;
+            width: 90%;
+            text-align: center;
+            span {
+              color: $date-color;
+            }
+          }
+        }
+
+        &-high {
+          background-color: darken($high-priority-secondary, 10%);
+          box-shadow: rgba($high-priority-primary, 0.5) 0px 0px 20px;
+        }
+        &-medium {
+          background-color: darken($medium-priority-secondary, 10%);
+          box-shadow: rgba($medium-priority-primary, 0.5) 0px 0px 20px;
+        }
+        &-low {
+          background-color: darken($low-priority-secondary, 10%);
+          box-shadow: rgba($low-priority-primary, 0.5) 0px 0px 20px;
+        }
+        &-done {
+          background-color: darken($done-priority-secondary, 10%);
+          box-shadow: rgba($done-priority-primary, 0.5) 0px 0px 20px;
+        }
+      }
+
+      &-backface {
+        &-high,
+        &-medium,
+        &-low,
+        &-done {
+          @include flex-display($direction: row, $space: center);
+          height: 20%;
+          width: $card-width;
+          transform: translateY(-60%);
+          transform: rotateX(90deg);
+          transform-origin: top;
+          opacity: 1;
+
+          .check,
+          .del {
+            i {
+              font-size: 1.6rem;
+              color: black;
+              transition: all 0.5s;
+            }
+
+            cursor: pointer;
+
+            &:hover {
+              i {
+                color: rgb(255, 255, 255);
+              }
+            }
+          }
+          border-top: 1px dotted black;
+          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 15px;
+
+          background-color: inherit;
+
+          gap: 2rem;
+        }
+
+        &-high {
+          background-color: darken($high-priority-secondary, 10%);
+          box-shadow: rgba($high-priority-primary, 0.5) 0px 0px 20px;
+        }
+        &-medium {
+          background-color: darken($medium-priority-secondary, 10%);
+          box-shadow: rgba($medium-priority-primary, 0.5) 0px 0px 20px;
+        }
+        &-low {
+          background-color: darken($low-priority-secondary, 10%);
+          box-shadow: rgba($low-priority-primary, 0.5) 0px 0px 20px;
+        }
+        &-done {
+          background-color: darken($done-priority-secondary, 10%);
+          box-shadow: rgba($done-priority-primary, 0.5) 0px 0px 20px;
+        }
+      }
+    }
+    &:hover {
+      .card-inner {
+        &-backface {
+          &-high,
+          &-medium,
+          &-low,
+          &-done {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.5s;
+          }
+        }
+      }
+    }
+  }
+}

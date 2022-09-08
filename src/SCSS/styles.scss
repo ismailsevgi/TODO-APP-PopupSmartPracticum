@@ -1,0 +1,33 @@
+//colors
+@import './variables/colors';
+
+//VARIABLES
+@import './variables/variables';
+
+//components
+@import './components/header';
+
+@import './components/allCards';
+
+@import './components/footer';
+//Main Page
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  padding-top: 3rem;
+  background-color: $background-color-dark;
+}
+
+.container {
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 80%;
+}

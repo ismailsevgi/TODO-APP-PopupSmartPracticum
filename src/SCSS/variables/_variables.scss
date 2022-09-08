@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+//mixin flex
+
+@mixin flex-display($direction: row, $space: space-between, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $space;
+  align-items: $align;
+}
+
+@mixin W-H100($W: 100%, $H: 100%) {
+  width: $W;
+  height: $H;
+}
+
+@mixin beforeTitle($title) {
+  &::before {
+    position: absolute;
+    content: $title;
+    color: inherit;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+  }
+}
+
+//fonts
+
+$primary-font: 'Oswald', sans-serif;
+$secondary-font: 'Source Sans Pro', sans-serif;
+//@at-root
+
+$all-cards-width: 80%;
+
+$grid-template-columns: repeat(4, 1fr);
+$grid-row-gap: 1rem;
+
+//header
+
+$inputBoxWidth: 52.6rem;
+$inputBoxHeight: 12.8rem;
+
+$inputWidth: 36rem;
+
+$labelWidth: 5rem;
+$labelHeight: 2rem;
+
+//card
+
+$card-height: 12rem;
+$card-width: 18rem;
+
+$card-description-size: 1.5rem;
+$card-date-size: 0.95rem;
+
+//capsule
+
+$capsule-width: 15rem;
+$capsule-gap: 1.2rem;
+
+$capsule-title-width: 5rem;
+$capsule-title-height: 1.6rem;
+$capsule-title-font: 1rem;
