@@ -4,12 +4,19 @@
   height: $inputBoxHeight;
   margin: 0 auto;
 
-  @include flex-display($direction: column, $space: space-around);
+  @include flex-display($direction: column, $space: none);
 
   background-color: $inputBackground-dark;
   border: 1px solid #706fd3;
 
+  &-welcome {
+    flex: 20%;
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
   .inputBox {
+    flex: 30%;
     @include flex-display($direction: row, $space: center);
 
     &-input {
@@ -66,6 +73,8 @@
   }
 
   &-priority {
+    flex: 40%;
+
     input[type='checkbox'] {
       position: absolute;
       top: 0;

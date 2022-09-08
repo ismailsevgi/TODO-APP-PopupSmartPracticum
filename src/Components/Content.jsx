@@ -1,12 +1,9 @@
 //this components are for keeping cards together in order.
-import { formatDistance, formatDistanceToNow } from 'date-fns';
-import React, { useContext, createContext, useEffect, useState } from 'react';
-import check from '../icons/check.png';
-import del from '../icons/del.png';
+import { formatDistance } from 'date-fns';
+import React, { useContext, useEffect, useState } from 'react';
+import GlobalContext from './GlobalContext';
 
 //import card component later
-
-import GlobalContext from './GlobalContext';
 
 const Content = () => {
   const [element, setElement] = useState('');

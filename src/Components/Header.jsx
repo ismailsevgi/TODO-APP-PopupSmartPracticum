@@ -10,7 +10,8 @@ const filterLow = ['low', 'medium', 'high', 'done'];
 const filterDone = ['done', 'high', 'medium', 'low'];
 
 function Header() {
-  const { setTask, task, setReload, setFilter } = useContext(GlobalContext);
+  const { setTask, task, setReload, setFilter, userName } =
+    useContext(GlobalContext);
 
   let formRef = useRef('');
 
@@ -81,9 +82,12 @@ function Header() {
     setFilter(filterHigh);
   }, []);
 
+  const myReg = /[^"]/g;
+
   return (
     <form ref={formRef} className='form' onSubmit={handleSubmit}>
       <ToastContainer />
+      <span className='form-welcome'>Welcome {userName.match(myReg)}</span>
       <div className='inputBox'>
         <input
           className='inputBox-input'

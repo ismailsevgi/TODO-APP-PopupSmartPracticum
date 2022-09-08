@@ -5,6 +5,10 @@ const GlobalContext = createContext();
 //card filter arrays
 
 export const GlobalContextProvider = ({ children }) => {
+  const [userName, setUserName] = useState(
+    JSON.stringify(localStorage.getItem('userName')) || null
+  );
+
   const [task, setTask] = useState({
     content: '',
     time: '',
@@ -61,6 +65,9 @@ export const GlobalContextProvider = ({ children }) => {
         setReload,
         task,
         setTask,
+
+        setUserName,
+        userName,
 
         setFilter,
         filter,
