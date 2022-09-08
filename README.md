@@ -1,6 +1,6 @@
 <h1>Todo App</h1>
 <p>This is a Classic Todo app made for Popupsmart React Practicum App Link</p>
-
+<p>Live version is here: <a href="https://popupsmartpracticum.netlify.app/?">LINK</a></p>
 <h2>Features<h2>
 <li>Data fetching from https://mockapi.io/ api.</li>
 <li>CRUD operations.</li>
