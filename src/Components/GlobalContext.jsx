@@ -31,7 +31,6 @@ export const GlobalContextProvider = ({ children }) => {
 
     fetch('https://63187952ece2736550cafa71.mockapi.io/todos')
       .then((res) => {
-        console.log(res.ok);
         return res.json();
       })
       .then((res) => {

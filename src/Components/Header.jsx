@@ -19,7 +19,6 @@ function Header() {
       ...task,
       content: e.target.value,
     });
-    console.log('current value: ', e.target.value);
   }
 
   function onlyOne(e) {
@@ -41,10 +40,6 @@ function Header() {
           position: 'top-center',
           autoClose: 2000,
           hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: 1,
         })
       : fetch('https://63187952ece2736550cafa71.mockapi.io/todos', {
           method: 'POST',
@@ -57,16 +52,11 @@ function Header() {
             return res.json();
           })
           .then((data) => {
-            console.log('Gönderilan data: ', data);
             setReload((prev) => !prev);
             toast.success('Task successfully added', {
               position: 'bottom-center',
               autoClose: 2000,
               hideProgressBar: true,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: 1,
             });
           });
 
@@ -77,7 +67,7 @@ function Header() {
 
   const handleFilter = (e) => {
     let value = e.target.value;
-    console.log('Filter value: ', value);
+
     value === 'highToLow'
       ? setFilter(filterHigh)
       : value === 'lowToHigh'

@@ -14,7 +14,6 @@ const Content = () => {
   const { todoArray, setReload, filter } = useContext(GlobalContext);
 
   function handleDelete(id) {
-    console.log('delete edildi');
     fetch(`https://63187952ece2736550cafa71.mockapi.io/todos/${id}`, {
       method: 'DELETE',
     }).then(() => {
@@ -23,23 +22,19 @@ const Content = () => {
   }
 
   function handleDone(id, priority) {
-    console.log('gelen priority', priority);
     let card = {};
     switch (priority) {
       case 'highCheck':
-        console.log('highdan çekti');
         card = todoArray.high.filter(
           (obj) => id === obj.id && { ...obj, isCompleted: !obj.isCompleted }
         );
         break;
       case 'mediumCheck':
-        console.log('middan çekti');
         card = todoArray.medium.filter(
           (obj) => id === obj.id && { ...obj, isCompleted: !obj.isCompleted }
         );
         break;
       case 'lowCheck':
-        console.log('lowdan çekti');
         card = todoArray.low.filter(
           (obj) => id === obj.id && { ...obj, isCompleted: !obj.isCompleted }
         );
@@ -48,8 +43,6 @@ const Content = () => {
 
     let item = card[0];
     item['isCompleted'] = true;
-
-    console.log('item after swtich: ', item);
 
     fetch(`https://63187952ece2736550cafa71.mockapi.io/todos/${id}`, {
       method: 'PUT',
@@ -63,7 +56,6 @@ const Content = () => {
     });
   }
 
-  console.log('TODO ARR geldi: ', todoArray);
   useEffect(() => {
     filter.length > 0 &&
       setElement(
