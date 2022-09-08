@@ -2,7 +2,7 @@
   "name": "todo-app-popupsmartpracticum",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://ismailsevgi.github.io/PopupSmartTodoApp",
+  "homepage": "https://ismailsevgi.github.io/TODO-APP-PopupSmartPracticum",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
